@@ -48,23 +48,31 @@ console.groupEnd()
 console.group("Circulo");
 
 //Radio
-const radioCirculo = 4;
+//const radioCirculo = 4;
 
 //Diametro
-const diametroCirculo = radioCirculo * 2;
+//const diametroCirculo = radioCirculo * 2;
+function diametroCirculo(radio){
+    return radio * 2;
+}
 
 //Pi
-const pi = 3.1416;
-
+//const pi = 3.1416;
 //Circunferencia
-const perimetroCirculo = diametroCirculo * pi;
-
+//const perimetroCirculo = diametroCirculo * pi;
+function perimetroCirculo(radio){
+    const diametro = diametroCirculo(radio)
+    return diametro * Math.PI;
+}
 //Area
-const areaCirculo = (radioCirculo * radioCirculo) * pi;
+//const areaCirculo = (radioCirculo * radioCirculo) * pi;
+function areaCirculo(radio){
+    return (radio * radio)*Math.PI;
+}
 
-console.log("El radio del circulo mide " + radioCirculo + " cm");
-console.log("El diametro del Circulo es " + diametroCirculo + " cm");
-console.log("Pi es igual a " + pi + " cm");
-console.log("La el perimetro del circulo es: " + perimetroCirculo + " cm");
-console.log("El area del circulo es: " + areaCirculo + " cm^2");
+//console.log("El radio del circulo mide " + radioCirculo + " cm");
+//console.log("El diametro del Circulo es " + diametroCirculo + " cm");
+//console.log("Pi es igual a " + pi + " cm");
+//console.log("La el perimetro del circulo es: " + perimetroCirculo + " cm");
+//console.log("El area del circulo es: " + areaCirculo + " cm^2");
 
