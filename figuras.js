@@ -1,23 +1,19 @@
 // Codigo del cuadrado
 console.group("Cuadrado");
-//const ladoCuadrado = 5;
-//console.log("Los lados del cuadrado miden: " + ladoCuadrado + " cm");
+
 
 function perimetroCuadrado(lado) {
     return lado * 4;
 } 
 
-//console.log("El perimetro del cuadrado mide: " + perimetroCuadrado + " cm");
-
 function areaCuadrado(lado) {
     return lado * lado;
 } 
-//console.log("El area del cuadrado mide: " + perimetroCuadrado + " cm2");
 
 console.groupEnd()
 
-
-
+//Codigo del Triangulo
+console.group("Triangulo")
 function perimetroTriangulo(ladoa, ladob, base){
     return ladoa + ladob + base;
 } 
@@ -46,3 +42,20 @@ function areaCirculo(radio){
     return (radio * radio)*Math.PI;
 }
 
+console.groupEnd()
+
+function calcularPerimetroCuadrado(){
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+    
+    const perimetro = perimetroCuadrado(input.value);
+    alert(perimetro);
+}
+
+function calcularareaCuadrado(){
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+    
+    const perimetro = areaCuadrado(input.value);
+    alert(perimetro);
+}
