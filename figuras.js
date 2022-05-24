@@ -1,6 +1,4 @@
 // Codigo del cuadrado
-console.group("Cuadrado");
-
 
 function perimetroCuadrado(lado) {
     return lado * 4;
@@ -10,10 +8,8 @@ function areaCuadrado(lado) {
     return lado * lado;
 } 
 
-console.groupEnd()
-
 //Codigo del Triangulo
-console.group("Triangulo")
+
 function perimetroTriangulo(ladoa, ladob, base){
     return ladoa + ladob + base;
 } 
@@ -22,11 +18,17 @@ function areaTriangulo(base, altura){
     return (base * altura)/2;
 } 
 
-console.groupEnd()
+//Codigo del Triangulo Isoceles
+
+function perimetroTriangulo(ladoa, ladob, base){
+    return ladoa + ladob + base;
+} 
+
+function areaTriangulo(base, altura){
+    return (base * altura)/2;
+} 
 
 // Codigo del Circulo
-console.group("Circulo");
-
 function diametroCirculo(radio){
     return radio * 2;
 }
@@ -40,9 +42,9 @@ function areaCirculo(radio){
     return (radio * radio)*Math.PI;
 }
 
-console.groupEnd()
 
-//Funcion para calcular Perimetro del Cuadrado
+//Funcion para calcular Perimetro del Cuadrado y ligado a HTML 
+
 function calcularPerimetroCuadrado(){
     const input = document.getElementById("InputCuadrado");
     const value = input.value;
@@ -105,3 +107,54 @@ function calcularAreaCirculo(){
     const areacirc = areaCirculo(valueRadio);
     alert("El area del Triangulo es " + areacirc);
 }
+
+//Calculos de Triangulo Isoceles
+function calcularPerimetroTIso(){
+    const input1 = document.getElementById("InputTIsoceles1");
+    const value1 = Number(input1.value);
+
+    const input2 = document.getElementById("InputTIsoceles2");
+    const value2 = Number(input2.value);
+    
+    const base = document.getElementById("InputTIsoceles3");
+    const value3 = Number(base.value);
+
+    const perimetro = perimetroTriangulo(value1, value2, value3);
+    alert("El perimetro del Triangulo es " + perimetro);
+}
+
+function calcularPerimetroTIso2(){
+    const input1 = document.getElementById("InputTIsoceles1");
+    const value1 = Number(input1.value);
+
+    const input2 = document.getElementById("InputTIsoceles2");
+    const value2 = Number(input2.value);
+    
+    const base = document.getElementById("InputTIsoceles3");
+    const value3 = Number(base.value);
+
+    const hipotenusa = document.getElementById("InputTIsoceles4");
+    const value4 = Number(base.value);
+
+    const perimetro = perimetroTriangulo(value1, value2, value3);
+    alert("El perimetro del Triangulo es " + perimetro);
+}
+
+function calcularAreaTriangulo(){
+    
+    const base = document.getElementById("InputTriangulo3");
+    const value3 = Number(base.value);
+    
+    const altura = document.getElementById("InputTrianguloAltura");
+    const altura1 = Number(altura.value);
+
+    const area = areaTriangulo(value3, altura1);
+    alert("El area del Triangulo es " + area);
+}
+
+//formula de triangulo isoceles
+perimetro =  ladoa + ladob
+
+hipotenusa = c^2= b^2 + a^2
+
+base = (c^2 - a^2)^2
